@@ -13,6 +13,7 @@ from src.logger import logging
 
 from src.utils import save_object,evaluate_model
 
+
 @dataclass
 class ModelTrainerConfig:
     trained_model_file_path = os.path.join("artifacts","model.pkl")
@@ -41,7 +42,7 @@ class ModelTrainer:
                 "AdaBoost Regressor": AdaBoostRegressor(),
             }
 
-            params={
+            params = {
                 "Decision Tree": {
                     'criterion':['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
                     # 'splitter':['best','random'],
@@ -99,11 +100,19 @@ class ModelTrainer:
             r2 = r2_score(y_test,predicted)
 
             return r2
-
+        
         except Exception as e:
             raise CustomException(e,sys)
 
+            
 
+
+    
+
+
+
+
+       
 
 
 
