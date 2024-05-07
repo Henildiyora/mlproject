@@ -19,3 +19,4 @@ For activate venv(Windows)
 .\venv\Scripts\activate.bat
 ```
 
+After creating a virtual environment, run the predict method inside the src/pipeline/predict_pipeline.py file.
